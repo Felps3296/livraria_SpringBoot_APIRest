@@ -33,12 +33,20 @@ public class LivroController {
         return ResponseEntity.ok(page);
     }
 
-    @PutMapping()
+    @PutMapping
     @Transactional
     public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizarLivro dados) {
 
         var livro = livroRepository.getReferenceById(dados.id());
         livro.atualizarInformacoes(dados);
         return ResponseEntity.ok(new DadosListrarLivro(livro));
+    }
+
+    @DeleteMapping("/id")
+    public ResponseEntity excluir(@RequestBody DadosListrarLivro dados) {
+
+        var livro = livroRepository.getReferenceById(dados.id());
+        livro.excluir();
+        return ResponseEntity.ok().build();
     }
 }

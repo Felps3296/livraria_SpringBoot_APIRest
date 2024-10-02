@@ -41,4 +41,9 @@ public class Livro {
         this.isbn = dados.isbn();
         this.disponibilidade = isDisponibilidade();
     }
+
+    public boolean excluir() {
+        this.disponibilidade = true;
+        return false;
+    }
 }
