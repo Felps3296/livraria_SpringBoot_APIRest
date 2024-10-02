@@ -4,5 +4,5 @@ CREATE TABLE livros (
            autor VARCHAR(255) NOT NULL,
            editora VARCHAR(255) NOT NULL,
            isbn VARCHAR(20) NOT NULL,
-           disponibilidade BOOLEAN
+           disponibilidade BOOLEAN DEFAULT TRUE
 );
