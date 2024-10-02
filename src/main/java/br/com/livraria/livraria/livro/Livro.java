@@ -1,6 +1,7 @@
 package br.com.livraria.livraria.livro;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 
 @Table(name = "livros")
@@ -32,4 +33,12 @@ public class Livro {
 
     }
 
+    public void atualizarInformacoes(@Valid DadosAtualizarLivro dados) {
+
+        this.titulo = dados.titulo();
+        this.autor = dados.autor();
+        this.editora = dados.editora();
+        this.isbn = dados.isbn();
+        this.disponibilidade = isDisponibilidade();
+    }
 }
