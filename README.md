@@ -9,7 +9,7 @@
 <h1>📚 Projeto Livraria - Spring Boot API REST</h1>
 
 <p>
-    Este é um sistema de gerenciamento de uma livraria, desenvolvido com <strong>Spring Boot</strong> e <strong>MySQL</strong>. O projeto permite o gerenciamento de livros, clientes e empréstimos de forma simples e eficiente, seguindo as regras de negócio pré-definidas.
+    Este é um sistema de gerenciamento de uma livraria, desenvolvido com <strong>Spring Boot</strong> e <strong>MySQL</strong>. O projeto permite o gerenciamento de livros, clientes e empréstimos, seguindo as regras de negócio pré-definidas.
 </p>
 
 <h2>🚀 Funcionalidades</h2>
