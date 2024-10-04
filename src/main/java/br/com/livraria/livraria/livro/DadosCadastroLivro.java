@@ -15,9 +15,6 @@ public record DadosCadastroLivro(
         String editora,
 
         @NotBlank
-        String ano_publicacao,
-
-        @NotBlank
         @Column(unique = true)
         String isbn,
 

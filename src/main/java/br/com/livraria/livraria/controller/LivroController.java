@@ -39,7 +39,7 @@ public class LivroController {
 
         var livro = livroRepository.getReferenceById(dados.id());
         livro.atualizarInformacoes(dados);
-        return ResponseEntity.ok(new DadosListrarLivro(livro));
+        return ResponseEntity.ok(new DadosDetalhamentoLivro(livro));
     }
 
     @DeleteMapping("/id")
@@ -47,6 +47,6 @@ public class LivroController {
 
         var livro = livroRepository.getReferenceById(dados.id());
         livro.excluir();
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 }
