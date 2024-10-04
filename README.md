@@ -16,7 +16,6 @@
 
 <h3>1. Gerenciamento de Livros</h3>
 <ul>
-    <li><strong>Objetivo</strong>: Manter um catálogo de livros com operações de adicionar, listar, editar e remover.</li>
     <li><strong>Regras de Negócio</strong>:
         <ul>
             <li>Todos os campos (<code>titulo</code>, <code>autor</code>, <code>editora</code>, <code>isbn</code> e <code>disponibilidade</code>) são obrigatórios.</li>
