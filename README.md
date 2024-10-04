@@ -28,7 +28,6 @@
 
 <h3>2. Gerenciamento de Clientes</h3>
 <ul>
-    <li><strong>Objetivo</strong>: Registrar os clientes que podem pegar livros emprestados.</li>
     <li><strong>Regras de Negócio</strong>:
         <ul>
             <li>O email deve ser único para cada cliente.</li>
