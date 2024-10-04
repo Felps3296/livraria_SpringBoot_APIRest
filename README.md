@@ -54,7 +54,7 @@
 
 - [x] CRUD de livros;
 - [ ] CRUD de clientes;
-- [ ] Empréstimo de Livros
+- [ ] CRUD Empréstimo de Livros
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 <div>
