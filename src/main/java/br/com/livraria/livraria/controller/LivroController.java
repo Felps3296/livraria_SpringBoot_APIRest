@@ -10,6 +10,10 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/livro")
 public class LivroController {
@@ -42,11 +46,26 @@ public class LivroController {
         return ResponseEntity.ok(new DadosDetalhamentoLivro(livro));
     }
 
-    @DeleteMapping("/id")
-    public ResponseEntity excluir(@RequestBody DadosListrarLivro dados) {
-
-        var livro = livroRepository.getReferenceById(dados.id());
-        livro.excluir();
-        return ResponseEntity.noContent().build();
+    @DeleteMapping("{id}")
+    @Transactional
+    public ResponseEntity<Map<String, String>> excluirLivro(@PathVariable Long id) {
+        Optional<Livro> livroOptional = livroRepository.findById(id);
+        if (livroOptional.isPresent()) {
+            Livro livro = livroOptional.get();
+            if (livro.excluir()) {
+                livroRepository.delete(livro);
+                Map<String, String> response = new HashMap<>();
+                response.put("mensagem", "Livro '" + livro.getTitulo() + "' excluído com sucesso!");
+                return ResponseEntity.ok(response);
+            } else {
+                Map<String, String> response = new HashMap<>();
+                response.put("mensagem", "Livro '" + livro.getTitulo() + "' não está disponivel para ser excluido");
+                return ResponseEntity.ok(response);
+            }
+        } else {
+            Map<String, String> response = new HashMap<>();
+            response.put("mensagem", "Livro não encontrado.");
+            return ResponseEntity.ok(response);
+        }
     }
 }
