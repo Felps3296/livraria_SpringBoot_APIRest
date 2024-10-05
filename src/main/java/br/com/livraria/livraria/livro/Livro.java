@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.*;
 
-@Table(name = "livros")
-@Entity(name = "livro")//Define a classe como uma entidade JPA
+@Table(name = "l_ivros")
+@Entity(name = "livro")
 @Setter
 @Getter
 @AllArgsConstructor
