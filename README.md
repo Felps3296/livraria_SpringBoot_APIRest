@@ -16,7 +16,6 @@
 
 <h3>1. Gerenciamento de Livros</h3>
 <ul>
-    <li><strong>Objetivo</strong>: Manter um catálogo de livros com operações de adicionar, listar, editar e remover.</li>
     <li><strong>Regras de Negócio</strong>:
         <ul>
             <li>Todos os campos (<code>titulo</code>, <code>autor</code>, <code>editora</code>, <code>isbn</code> e <code>disponibilidade</code>) são obrigatórios.</li>
@@ -30,6 +29,7 @@
 <ul>
     <li><strong>Regras de Negócio</strong>:
         <ul>
+            <li>Todos os campos (<code>nome</code>, <code>email</code>, <code>telefone</code>, <code>data de nascimento</code> e <code>endereço</code>) são obrigatórios.</li>
             <li>O email deve ser único para cada cliente.</li>
             <li>Permitir a atualização de dados do cliente, mas mantendo o email único.</li>
         </ul>
@@ -49,33 +49,11 @@
     </li>
 </ul>
 
-<h2>📖 Endpoints</h2>
+## ⚙️ Funcionalidades
 
-<h3>Livros</h3>
-<ul>
-    <li><code>POST /livros</code> - Cadastrar um novo livro</li>
-    <li><code>GET /livros</code> - Listar todos os livros</li>
-    <li><code>GET /livros/{id}</code> - Obter os detalhes de um livro específico</li>
-    <li><code>PUT /livros/{id}</code> - Atualizar um livro</li>
-    <li><code>DELETE /livros/{id}</code> - Remover um livro (somente se <code>disponibilidade = true</code>)</li>
-</ul>
-
-<h3>Clientes</h3>
-<ul>
-    <li><code>POST /clientes</code> - Adicionar um novo cliente</li>
-    <li><code>GET /clientes</code> - Listar todos os clientes</li>
-    <li><code>GET /clientes/{id}</code> - Obter os detalhes de um cliente específico</li>
-    <li><code>PUT /clientes/{id}</code> - Atualizar os dados de um cliente</li>
-    <li><code>DELETE /clientes/{id}</code> - Remover um cliente</li>
-</ul>
-
-<h3>Empréstimos</h3>
-<ul>
-    <li><code>POST /emprestimos</code> - Registrar um novo empréstimo</li>
-    <li><code>GET /emprestimos</code> - Listar todos os empréstimos</li>
-    <li><code>GET /emprestimos/{id}</code> - Obter os detalhes de um empréstimo específico</li>
-    <li><code>PUT /emprestimos/{id}/devolucao</code> - Registrar a devolução de um livro</li>
-</ul>
+- [x] CRUD de livros;
+- [ ] CRUD de clientes;
+- [ ] CRUD Empréstimo de Livros
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 <div>
@@ -101,28 +79,6 @@
     <li><strong>MySQL</strong> ou outro banco de dados configurado</li>
     <li><strong>Maven</strong> para gerenciar dependências</li>
 </ul>
-
-<h3>Passos para rodar o projeto</h3>
-<ol>
-    <li>Clone o repositório:
-        <pre><code>git clone https://github.com/seu-usuario/projeto_livraria_SpringBoot_APIRest.git</code></pre>
-    </li>
-    <li>Entre no diretório do projeto:
-        <pre><code>cd projeto_livraria_SpringBoot_APIRest</code></pre>
-    </li>
-    <li>Configure o banco de dados no arquivo <code>application.properties</code>:
-        <pre><code>spring.datasource.url=jdbc:mysql://localhost:3306/livraria
-spring.datasource.username=root
-spring.datasource.password=senha
-spring.jpa.hibernate.ddl-auto=update</code></pre>
-    </li>
-    <li>Execute o projeto:
-        <pre><code>mvn spring-boot:run</code></pre>
-    </li>
-    <li>Acesse a API via Postman ou outra ferramenta na URL:
-        <pre><code>http://localhost:8080</code></pre>
-    </li>
-</ol>
 
 <h2>✍️ Autor</h2>
 
