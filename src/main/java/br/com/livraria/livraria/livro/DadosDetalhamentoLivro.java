@@ -1,7 +1,7 @@
 package br.com.livraria.livraria.livro;
 
 
-public record DadosDetalhamentoLivro(String titulo,String autor,String editora,String ano_publicacao,String isbn) {
+public record DadosDetalhamentoLivro(String titulo,String autor,String editora,String isbn) {
 
         public DadosDetalhamentoLivro(Livro livro) {
 
