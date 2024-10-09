@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Table(name = "clientes")
-@Entity(name = "Cliente")
+@Entity(name = "cliente")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Getter
-@Setter
 public class Cliente {
 
     @Id
