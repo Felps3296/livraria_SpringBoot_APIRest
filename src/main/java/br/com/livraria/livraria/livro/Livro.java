@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.*;
 
-@Table(name = "l_ivros")
-@Entity(name = "livro")
+@Table(name = "livros")
+@Entity(name = "Livro")
 @Setter
 @Getter
 @AllArgsConstructor
